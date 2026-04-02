@@ -245,10 +245,25 @@ If no action needed, return decisions as an empty array with a summary explainin
     try:
         return json.loads(raw)
     except json.JSONDecodeError:
-        match = re.search(r'\{.*\}', raw, re.DOTALL)
-        if match:
-            return json.loads(match.group())
-        raise ValueError(f"Could not parse Claude response as JSON: {raw}")
+        matches = re.findall(r'\{.*?\}', raw, re.DOTALL)
+        for match in matches:
+            try:
+                parsed = json.loads(match)
+                if "decisions" in parsed:
+                    return parsed
+            except json.JSONDecodeError:
+                continue
+
+        start = raw.find('{')
+        end = raw.rfind('}')
+        if start != -1 and end != -1:
+            try:
+                return json.loads(raw[start:end+1])
+            except json.JSONDecodeError:
+                pass
+
+        print(f"Warning: Could not parse response, returning empty decisions. Raw: {raw[:200]}")
+        return {"decisions": [], "summary": "Could not parse Claude response, skipping cycle"}
 
 def execute_trades(portfolio, decisions, prices):
     executed = []
