@@ -1,8 +1,8 @@
 import os
 import json
+import re
 import yfinance as yf
 import pandas as pd
-import numpy as np
 from anthropic import Anthropic
 from datetime import datetime
 
@@ -11,7 +11,6 @@ client = Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 TRANSACTION_FEE = 2.0
 PORTFOLIO_FILE = "portfolio.json"
 TOP_MOVERS_COUNT = 20
-INDICATORS_COUNT = 30
 
 def load_portfolio():
     with open(PORTFOLIO_FILE, "r") as f:
@@ -35,7 +34,6 @@ def get_sp500_tickers():
         except Exception as e:
             print(f"Source failed ({url}): {e}")
             continue
-
     print("All sources failed, using fallback list")
     return [
         "AAPL", "MSFT", "NVDA", "GOOGL", "META", "AMD", "TSLA", "AMZN",
@@ -175,18 +173,6 @@ def calculate_indicators(symbol, hist_close, hist_volume, in_portfolio):
         print(f"Error calculating indicators for {symbol}: {e}")
         return None
 
-def get_stock_prices(symbols):
-    prices = {}
-    for symbol in symbols:
-        try:
-            ticker = yf.Ticker(symbol)
-            data = ticker.history(period="1d", interval="1m")
-            if not data.empty:
-                prices[symbol] = round(float(data["Close"].iloc[-1]), 2)
-        except Exception as e:
-            print(f"Error fetching {symbol}: {e}")
-    return prices
-
 def calculate_portfolio_value(portfolio, prices):
     total = portfolio["cash"]
     for symbol, shares in portfolio["holdings"].items():
@@ -194,7 +180,7 @@ def calculate_portfolio_value(portfolio, prices):
             total += shares * prices[symbol]
     return round(total, 2)
 
-ddef ask_claude_for_decisions(portfolio, prices, watchlist_with_indicators):
+def ask_claude_for_decisions(portfolio, prices, watchlist_with_indicators):
     holdings_detail = {}
     for symbol, shares in portfolio["holdings"].items():
         if symbol in prices:
@@ -253,7 +239,6 @@ If no action needed, return decisions as an empty array with a summary explainin
         messages=[{"role": "user", "content": prompt}]
     )
 
-    import re
     raw = response.content[0].text.strip()
     raw = raw.replace("```json", "").replace("```", "").strip()
 
