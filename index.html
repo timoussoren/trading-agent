@@ -208,7 +208,7 @@ async function loadPortfolio() {
       document.getElementById('last-updated').textContent = 'Running — no cycles completed yet';
     }
     buildChart(data.transaction_history || []);
-    renderHoldings(data.holdings || {});
+    renderHoldings(data.holdings_with_value || data.holdings || {});
     renderTransactions(data.transaction_history || []);
   } catch(e) {
     document.getElementById('last-updated').textContent = 'Could not load portfolio data';
