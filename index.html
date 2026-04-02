@@ -200,10 +200,19 @@ function buildChart(valueHistory) {
   }
 }
 
-function renderHoldings(holdings) {
+function renderHoldings(portfolio) {
   const el = document.getElementById('holdings-list');
-  const entries = Object.entries(holdings || {});
-  if (!entries.length) { el.innerHTML = '<div style="font-size:13px;color:#888;">No holdings yet</div>'; return; }
+  const hwv = portfolio.holdings_with_value || {};
+  const plain = portfolio.holdings || {};
+  const entries = Object.keys(hwv).length > 0
+    ? Object.entries(hwv)
+    : Object.entries(plain);
+
+  if (!entries.length) {
+    el.innerHTML = '<div style="font-size:13px;color:#888;">No holdings yet</div>';
+    return;
+  }
+
   el.innerHTML = `
     <div class="trade-row" style="font-size:11px;color:#888;font-weight:500;">
       <span style="min-width:55px;">Symbol</span>
@@ -213,8 +222,8 @@ function renderHoldings(holdings) {
     </div>` +
     entries.map(([sym, data]) => {
       const shares = typeof data === 'object' ? data.shares : data;
-      const price = typeof data === 'object' ? '$' + data.price?.toFixed(2) : '—';
-      const value = typeof data === 'object' ? '$' + data.value?.toFixed(2) : '—';
+      const price  = typeof data === 'object' && data.price ? '$' + Number(data.price).toFixed(2) : '—';
+      const value  = typeof data === 'object' && data.value ? '$' + Number(data.value).toFixed(2) : '—';
       return `<div class="trade-row">
         <span style="font-weight:500;min-width:55px;">${sym}</span>
         <span style="color:#888;min-width:50px;">${shares}</span>
@@ -266,7 +275,7 @@ async function loadPortfolio() {
     }
 
     buildChart(data.value_history || []);
-    renderHoldings(data.holdings_with_value || data.holdings || {});
+    renderHoldings(data);
     renderTransactions(data.transaction_history || []);
   } catch(e) {
     document.getElementById('last-updated').textContent = 'Could not load portfolio data';
