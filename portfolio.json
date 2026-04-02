@@ -1,8 +1,9 @@
 {
-  "cash": 221.12,
+  "cash": 17.88,
   "holdings": {
     "NVDA": 3,
-    "AAPL": 1
+    "AAPL": 1,
+    "INTC": 4
   },
   "transaction_history": [
     {
@@ -22,21 +23,30 @@
       "reason": "AAPL is a stable blue-chip stock providing portfolio balance. At $252.10 + $2 fee = $254.10, this uses remaining cash efficiently for diversification.",
       "price": 252.1,
       "total": 254.1
+    },
+    {
+      "timestamp": "2026-04-02T19:57:31.901718",
+      "action": "buy",
+      "symbol": "INTC",
+      "shares": 4,
+      "reason": "INTC shows strong bullish signals: price ($50.31) is above MA7, MA20, and MA50, with solid 7-day momentum (+6.63%) and 30-day momentum (+14.06%). RSI at 58.43 indicates room for growth without being overbought. Volume ratio of 1.08 confirms normal trading activity. At $50.31 x 4 = $201.24 + $2 fee = $203.24, this fits within available cash.",
+      "price": 50.31,
+      "total": 203.24
     }
   ],
-  "last_updated": "2026-04-02T16:57:40.158398",
-  "total_value": 1005.33,
-  "invested": 784.21,
+  "last_updated": "2026-04-02T19:57:31.901725",
+  "total_value": 1006.79,
+  "invested": 988.91,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 176.53,
-      "value": 529.59
+      "price": 177.26,
+      "value": 531.78
     },
     "AAPL": {
       "shares": 1,
-      "price": 254.62,
-      "value": 254.62
+      "price": 255.89,
+      "value": 255.89
     }
   },
   "value_history": [
@@ -57,6 +67,12 @@
       "total_value": 1005.33,
       "cash": 221.12,
       "invested": 784.21
+    },
+    {
+      "timestamp": "2026-04-02T19:57:31.901734",
+      "total_value": 1006.79,
+      "cash": 17.88,
+      "invested": 988.91
     }
   ]
 }
