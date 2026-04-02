@@ -22,18 +22,26 @@ def save_portfolio(portfolio):
         json.dump(portfolio, f, indent=2)
 
 def get_sp500_tickers():
-    try:
-        table = pd.read_html("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies")[0]
-        tickers = table["Symbol"].str.replace(".", "-", regex=False).tolist()
-        print(f"✅ Fetched {len(tickers)} S&P 500 tickers")
-        return tickers
-    except Exception as e:
-        print(f"Could not fetch S&P 500 list, using fallback: {e}")
-        return [
-            "AAPL", "MSFT", "NVDA", "GOOGL", "META", "AMD", "TSLA", "AMZN",
-            "JPM", "BAC", "GS", "V", "MA", "JNJ", "PFE", "UNH", "ABBV",
-            "XOM", "CVX", "WMT", "MCD", "COST", "NKE", "SPY", "QQQ"
-        ]
+    sources = [
+        "https://raw.githubusercontent.com/datasets/s-and-p-500-companies/main/data/constituents.csv",
+        "https://datahub.io/core/s-and-p-500-companies/r/constituents.csv"
+    ]
+    for url in sources:
+        try:
+            df = pd.read_csv(url)
+            tickers = df["Symbol"].str.replace(".", "-", regex=False).tolist()
+            print(f"✅ Fetched {len(tickers)} S&P 500 tickers")
+            return tickers
+        except Exception as e:
+            print(f"Source failed ({url}): {e}")
+            continue
+
+    print("All sources failed, using fallback list")
+    return [
+        "AAPL", "MSFT", "NVDA", "GOOGL", "META", "AMD", "TSLA", "AMZN",
+        "JPM", "BAC", "GS", "V", "MA", "JNJ", "PFE", "UNH", "ABBV",
+        "XOM", "CVX", "WMT", "MCD", "COST", "NKE", "SPY", "QQQ"
+    ]
 
 def bulk_fetch_prices_and_movers(tickers, holdings):
     print(f"📦 Bulk downloading price history for {len(tickers)} stocks...")
@@ -245,9 +253,17 @@ If no action needed, return decisions as an empty array with a summary explainin
         messages=[{"role": "user", "content": prompt}]
     )
 
-    raw = response.content[0].text.strip()
-    raw = raw.replace("```json", "").replace("```", "").strip()
-    return json.loads(raw)
+   raw = response.content[0].text.strip()
+   raw = raw.replace("```json", "").replace("```", "").strip()
+
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        import re
+        match = re.search(r'\{.*\}', raw, re.DOTALL)
+        if match:
+            return json.loads(match.group())
+        raise ValueError(f"Could not parse Claude response as JSON: {raw}")
 
 def execute_trades(portfolio, decisions, prices):
     executed = []
