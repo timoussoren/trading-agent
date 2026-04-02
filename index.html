@@ -152,9 +152,24 @@ function renderHoldings(holdings) {
   const el = document.getElementById('holdings-list');
   const entries = Object.entries(holdings || {});
   if (!entries.length) { el.innerHTML = '<div style="font-size:13px;color:#888;">No holdings yet</div>'; return; }
-  el.innerHTML = entries.map(([sym, shares]) =>
-    `<div class="trade-row"><span style="font-weight:500;min-width:60px;">${sym}</span><span style="color:#888;">${shares} shares</span></div>`
-  ).join('');
+  el.innerHTML = `
+    <div class="trade-row" style="font-size:11px; color:#888; font-weight:500;">
+      <span style="min-width:55px;">Symbol</span>
+      <span style="min-width:50px;">Shares</span>
+      <span style="min-width:65px;">Price</span>
+      <span style="margin-left:auto;">Value</span>
+    </div>` +
+    entries.map(([sym, data]) => {
+      const shares = typeof data === 'object' ? data.shares : data;
+      const price = typeof data === 'object' ? '$' + data.price?.toFixed(2) : '—';
+      const value = typeof data === 'object' ? '$' + data.value?.toFixed(2) : '—';
+      return `<div class="trade-row">
+        <span style="font-weight:500;min-width:55px;">${sym}</span>
+        <span style="color:#888;min-width:50px;">${shares}</span>
+        <span style="color:#888;min-width:65px;">${price}</span>
+        <span style="margin-left:auto;font-weight:500;">${value}</span>
+      </div>`;
+    }).join('');
 }
 
 function renderTransactions(history) {
