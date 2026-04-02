@@ -19,7 +19,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install anthropic yfinance
+        run: pip install anthropic yfinance pandas lxml html5lib beautifulsoup4
 
       - name: Run trading agent
         env:
