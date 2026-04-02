@@ -194,7 +194,7 @@ def calculate_portfolio_value(portfolio, prices):
             total += shares * prices[symbol]
     return round(total, 2)
 
-def ask_claude_for_decisions(portfolio, prices, watchlist_with_indicators):
+ddef ask_claude_for_decisions(portfolio, prices, watchlist_with_indicators):
     holdings_detail = {}
     for symbol, shares in portfolio["holdings"].items():
         if symbol in prices:
@@ -253,13 +253,13 @@ If no action needed, return decisions as an empty array with a summary explainin
         messages=[{"role": "user", "content": prompt}]
     )
 
-   raw = response.content[0].text.strip()
-   raw = raw.replace("```json", "").replace("```", "").strip()
+    import re
+    raw = response.content[0].text.strip()
+    raw = raw.replace("```json", "").replace("```", "").strip()
 
     try:
         return json.loads(raw)
     except json.JSONDecodeError:
-        import re
         match = re.search(r'\{.*\}', raw, re.DOTALL)
         if match:
             return json.loads(match.group())
