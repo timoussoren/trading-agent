@@ -34,19 +34,24 @@
       "total": 203.24
     }
   ],
-  "last_updated": "2026-04-02T19:57:31.901725",
-  "total_value": 1006.79,
-  "invested": 988.91,
+  "last_updated": "2026-04-02T20:41:07.547156",
+  "total_value": 1007.49,
+  "invested": 989.61,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 177.26,
-      "value": 531.78
+      "price": 177.39,
+      "value": 532.17
     },
     "AAPL": {
       "shares": 1,
-      "price": 255.89,
-      "value": 255.89
+      "price": 255.92,
+      "value": 255.92
+    },
+    "INTC": {
+      "shares": 4,
+      "price": 50.38,
+      "value": 201.52
     }
   },
   "value_history": [
@@ -73,6 +78,12 @@
       "total_value": 1006.79,
       "cash": 17.88,
       "invested": 988.91
+    },
+    {
+      "timestamp": "2026-04-02T20:41:07.547179",
+      "total_value": 1007.49,
+      "cash": 17.88,
+      "invested": 989.61
     }
   ]
 }
