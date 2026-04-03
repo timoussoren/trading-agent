@@ -2,8 +2,12 @@ name: Trading Agent
 
 on:
   schedule:
-    - cron: '0 */4 * * *'  # Every 4 hours
-  workflow_dispatch:  # Allows manual trigger
+    - cron: '30 14 * * 1-5'  # 9:30 AM ET — market open
+    - cron: '54 15 * * 1-5'  # 10:54 AM ET — late morning
+    - cron: '18 17 * * 1-5'  # 12:18 PM ET — midday
+    - cron: '42 18 * * 1-5'  # 1:42 PM ET — mid afternoon
+    - cron: '0 20  * * 1-5'  # 3:00 PM ET — before close
+  workflow_dispatch:
 
 jobs:
   trade:
