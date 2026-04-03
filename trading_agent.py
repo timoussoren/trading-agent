@@ -363,7 +363,8 @@ def main():
     else:
         print("\n⏸️  No trades this cycle")
 
-    portfolio["last_updated"] = datetime.now().isoformat()
+    portfolio["last_strategy"] = result.get("summary", "No strategy available")
+    portfolio["last_decisions"] = result.get("decisions", [])
     portfolio["total_value"] = calculate_portfolio_value(portfolio, current_prices)
     portfolio["invested"] = round(portfolio["total_value"] - portfolio["cash"], 2)
     portfolio["holdings_with_value"] = holdings_with_value
