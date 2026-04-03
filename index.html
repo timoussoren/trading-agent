@@ -59,6 +59,11 @@
 
   <div class="section-label">Portfolio value over time</div>
   <div class="card">
+    <div style="display:flex; gap:16px; margin-bottom:12px; font-size:12px; color:#888;">
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#378ADD;display:inline-block;"></span>Total value</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#1D9E75;display:inline-block;"></span>Cash</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#E24B4A;display:inline-block;"></span>Invested</span>
+    </div>
     <div style="position:relative; width:100%; height:220px;"><canvas id="valueChart"></canvas></div>
   </div>
 
@@ -75,14 +80,26 @@
     </div>
   </div>
 
-  <div class="section-label" style="margin-top:1.5rem;">Recent transactions</div>
+  <div class="section-label" style="margin-top:1.5rem;">Latest agent decision</div>
+  <div class="card" id="strategy-box">
+    <div style="font-size:13px;color:#888;">No strategy available yet</div>
+  </div>
+
+  <div class="section-label">Recent transactions</div>
   <div class="card" id="transactions">
     <div style="font-size:13px; color:#888;">No transactions yet</div>
   </div>
 
 <script>
 const PORTFOLIO_URL = "https://raw.githubusercontent.com/timoussoren/trading-agent/main/portfolio.json";
-const SCHEDULE_HOURS = [0, 4, 8, 12, 16, 20];
+
+const SCHEDULE_HOURS = [
+  { utc: '14:30', label: '14:30 UTC — market open' },
+  { utc: '15:54', label: '15:54 UTC — late morning' },
+  { utc: '17:18', label: '17:18 UTC — midday' },
+  { utc: '18:42', label: '18:42 UTC — mid afternoon' },
+  { utc: '20:00', label: '20:00 UTC — before close' }
+];
 
 function updateClock() {
   const now = new Date();
@@ -94,21 +111,36 @@ updateClock();
 
 function buildSchedule() {
   const now = new Date();
-  const nowH = now.getUTCHours() + now.getUTCMinutes() / 60;
+  const dayOfWeek = now.getUTCDay();
+  const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+  const nowMins = now.getUTCHours() * 60 + now.getUTCMinutes();
   const container = document.getElementById('schedule');
   container.innerHTML = '';
+
+  if (isWeekend) {
+    container.innerHTML = '<div class="slot pending"><div class="slot-time pending">Market closed — weekend</div><div class="slot-badge badge-pending">Resumes Monday 14:30 UTC</div></div>';
+    return;
+  }
+
+  const marketCloseMins = 20 * 60 + 30;
+  if (nowMins > marketCloseMins) {
+    container.innerHTML = '<div class="slot pending"><div class="slot-time pending">Market closed for today</div><div class="slot-badge badge-pending">Resumes tomorrow 14:30 UTC</div></div>';
+    return;
+  }
+
   let foundNext = false;
-  SCHEDULE_HOURS.forEach(h => {
-    const label = h.toString().padStart(2,'0') + ':00 UTC';
+  SCHEDULE_HOURS.forEach(slot => {
+    const [h, m] = slot.utc.split(':').map(Number);
+    const slotMins = h * 60 + m;
     let state, badgeText;
-    if (h < nowH - 0.1) { state = 'done'; badgeText = 'Completed'; }
+    if (slotMins < nowMins - 5) { state = 'done'; badgeText = 'Completed'; }
     else if (!foundNext) { state = 'next'; badgeText = 'Next run'; foundNext = true; }
     else { state = 'pending'; badgeText = 'Pending'; }
-    const slot = document.createElement('div');
-    slot.className = 'slot ' + state;
-    slot.innerHTML = `<div class="slot-time ${state}">${label}</div>
+    const el = document.createElement('div');
+    el.className = 'slot ' + state;
+    el.innerHTML = `<div class="slot-time ${state}">${slot.label}</div>
       <div class="slot-badge badge-${state === 'done' ? 'done' : state === 'next' ? 'next' : 'pending'}">${badgeText}</div>`;
-    container.appendChild(slot);
+    container.appendChild(el);
   });
 }
 
@@ -143,7 +175,7 @@ function buildChart(valueHistory) {
           backgroundColor: 'rgba(55,138,221,0.08)',
           fill: true,
           tension: 0.3,
-          pointRadius: 4,
+          pointRadius: 3,
           pointBackgroundColor: '#378ADD',
           borderWidth: 2
         },
@@ -183,21 +215,12 @@ function buildChart(valueHistory) {
           grid: { color: 'rgba(0,0,0,0.06)' }
         },
         x: {
-          ticks: { maxRotation: 35, font: { size: 11 } },
+          ticks: { maxRotation: 35, font: { size: 11 }, autoSkip: true, maxTicksLimit: 10 },
           grid: { display: false }
         }
       }
     }
   });
-
-  const legendEl = document.getElementById('chart-legend');
-  if (legendEl) {
-    legendEl.innerHTML = `
-      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#378ADD;"></span>Total value</span>
-      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#1D9E75;"></span>Cash</span>
-      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#E24B4A;"></span>Invested</span>
-    `;
-  }
 }
 
 function renderHoldings(portfolio) {
@@ -233,9 +256,39 @@ function renderHoldings(portfolio) {
     }).join('');
 }
 
+function renderStrategy(strategy, decisions) {
+  const el = document.getElementById('strategy-box');
+  if (!strategy) {
+    el.innerHTML = '<div style="font-size:13px;color:#888;">No strategy available yet</div>';
+    return;
+  }
+
+  const decisionsHtml = decisions && decisions.length > 0
+    ? decisions.map(d => `
+        <div class="trade-row">
+          <span class="pill ${d.action === 'buy' ? 'pill-buy' : 'pill-sell'}">${d.action}</span>
+          <span style="font-weight:500;min-width:55px;">${d.symbol}</span>
+          <span style="color:#888;font-size:12px;flex:1;">${d.shares} shares — ${d.reason}</span>
+        </div>`).join('')
+    : '<div style="font-size:13px;color:#888;padding:8px 0;">No trades this cycle — holding position</div>';
+
+  el.innerHTML = `
+    <div style="margin-bottom:12px;">
+      <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Strategy summary</div>
+      <div style="font-size:13px;color:#1a1a18;line-height:1.6;">${strategy}</div>
+    </div>
+    <div style="border-top:0.5px solid rgba(0,0,0,0.08);padding-top:10px;">
+      <div style="font-size:11px;color:#888;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:4px;">Decisions</div>
+      ${decisionsHtml}
+    </div>`;
+}
+
 function renderTransactions(history) {
   const el = document.getElementById('transactions');
-  if (!history || !history.length) { el.innerHTML = '<div style="font-size:13px;color:#888;">No transactions yet</div>'; return; }
+  if (!history || !history.length) {
+    el.innerHTML = '<div style="font-size:13px;color:#888;">No transactions yet</div>';
+    return;
+  }
   el.innerHTML = [...history].reverse().slice(0, 10).map(t => {
     const pill = t.action === 'buy' ? 'pill-buy' : 'pill-sell';
     const d = new Date(t.timestamp);
@@ -243,7 +296,7 @@ function renderTransactions(history) {
     return `<div class="trade-row">
       <span class="pill ${pill}">${t.action}</span>
       <span style="font-weight:500;min-width:55px;">${t.symbol}</span>
-      <span style="color:#888;">${t.shares} shares @ $${t.price?.toFixed(2)}</span>
+      <span style="color:#888;">${t.shares} shares @ $${Number(t.price).toFixed(2)}</span>
       <span style="margin-left:auto;color:#888;font-size:12px;">${dateStr}</span>
     </div>`;
   }).join('');
@@ -276,6 +329,7 @@ async function loadPortfolio() {
 
     buildChart(data.value_history || []);
     renderHoldings(data);
+    renderStrategy(data.last_strategy || null, data.last_decisions || []);
     renderTransactions(data.transaction_history || []);
   } catch(e) {
     document.getElementById('last-updated').textContent = 'Could not load portfolio data';
