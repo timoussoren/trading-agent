@@ -34,7 +34,7 @@
       "total": 203.24
     }
   ],
-  "last_updated": "2026-04-02T20:41:07.547156",
+  "last_updated": "2026-04-03T02:28:40.549056",
   "total_value": 1007.49,
   "invested": 989.61,
   "holdings_with_value": {
@@ -81,6 +81,12 @@
     },
     {
       "timestamp": "2026-04-02T20:41:07.547179",
+      "total_value": 1007.49,
+      "cash": 17.88,
+      "invested": 989.61
+    },
+    {
+      "timestamp": "2026-04-03T02:28:40.549080",
       "total_value": 1007.49,
       "cash": 17.88,
       "invested": 989.61
