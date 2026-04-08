@@ -63,8 +63,8 @@
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1045.44,
-  "invested": 1027.82,
+  "total_value": 1042.22,
+  "invested": 1024.6,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
@@ -73,13 +73,18 @@
     },
     "AAPL": {
       "shares": 1,
-      "price": 257.53,
-      "value": 257.53
+      "price": 258.14,
+      "value": 258.14
     },
     "UAL": {
       "shares": 2,
-      "price": 98.06,
-      "value": 196.12
+      "price": 96.21,
+      "value": 192.42
+    },
+    "CCL": {
+      "shares": 1,
+      "price": 27.89,
+      "value": 27.89
     }
   },
   "value_history": [
@@ -244,15 +249,14 @@
       "total_value": 1045.44,
       "cash": 17.62,
       "invested": 1027.82
+    },
+    {
+      "timestamp": "2026-04-08T19:50:00.754818",
+      "total_value": 1042.22,
+      "cash": 17.62,
+      "invested": 1024.6
     }
   ],
-  "last_strategy": "Holding current positions: NVDA showing positive momentum (+10.22% 7d) with RSI at 61.14 (healthy); AAPL stable with neutral RSI at 48.82; UAL still in oversold territory (RSI 32.17) with strong volume ratio of 1.46, indicating potential for continued recovery. Adding small CCL position as it shows strong momentum without being overbought. Avoiding highly overbought stocks like MPWR (RSI 94.78), WDC (RSI 91.89), SNDK (RSI 87.36), and TER (RSI 82.7) which are at elevated risk of pullback. Limited cash restricts ability to add larger positions.",
-  "last_decisions": [
-    {
-      "action": "buy",
-      "symbol": "CCL",
-      "shares": 1,
-      "reason": "CCL has RSI of 46.48 (neutral, not overbought), strong 7-day momentum (+16.94%), price above MA7 and MA20, with volume ratio of 1.26 indicating solid buying interest. At $28.02 + $2 fee = $30.02, this fits within available cash of $47.64 and offers good risk/reward with price below MA50 suggesting room for mean reversion upward."
-    }
-  ]
+  "last_strategy": "Holding current positions due to limited cash ($17.62) which is insufficient to buy any meaningful shares after the $2 fee. Portfolio analysis: NVDA is showing positive momentum (+10.22% 7-day) with RSI at 61.14 (neutral) and price near MA50 - hold for potential upside. AAPL has neutral RSI (48.82) with modest momentum - stable hold. UAL is oversold (RSI 32.17) with strong volume ratio (1.70) and 12.91% 7-day momentum, suggesting potential bounce - hold for recovery. CCL shows good momentum (+16.4% 7-day) with neutral RSI (46.48) - hold. Most market movers have very high RSI values (MPWR 94.78, WDC 91.89, SNDK 87.36, TER 82.70) indicating overbought conditions and poor entry points. No sells recommended as all holdings show reasonable technical setups for continued holding or recovery.",
+  "last_decisions": []
 }
