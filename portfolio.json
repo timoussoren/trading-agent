@@ -73,33 +73,33 @@
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1087.05,
-  "invested": 1084.16,
+  "total_value": 1097.41,
+  "invested": 1094.52,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 196.51,
-      "value": 589.53
+      "price": 199.9,
+      "value": 599.7
     },
     "AAPL": {
       "shares": 1,
-      "price": 258.83,
-      "value": 258.83
+      "price": 263.71,
+      "value": 263.71
     },
     "UAL": {
       "shares": 2,
-      "price": 97.2,
-      "value": 194.4
+      "price": 94.96,
+      "value": 189.92
     },
     "CCL": {
       "shares": 1,
-      "price": 28.69,
-      "value": 28.69
+      "price": 28.59,
+      "value": 28.59
     },
     "F": {
       "shares": 1,
-      "price": 12.71,
-      "value": 12.71
+      "price": 12.6,
+      "value": 12.6
     }
   },
   "value_history": [
@@ -396,8 +396,14 @@
       "total_value": 1087.05,
       "cash": 2.89,
       "invested": 1084.16
+    },
+    {
+      "timestamp": "2026-04-15T15:44:46.593393",
+      "total_value": 1097.41,
+      "cash": 2.89,
+      "invested": 1094.52
     }
   ],
-  "last_strategy": "With only $2.89 available cash and a $2.00 transaction fee, I cannot make any purchases (minimum would need price + $2 fee). Reviewing current holdings: NVDA is at 52-week high with strong momentum (+10.62% 7d) and RSI 33.67 (not overbought) - hold for further gains. AAPL has RSI 68.74 approaching overbought but flat momentum - hold and monitor. UAL has RSI 35.21 (near oversold) with positive 7d momentum (+6.85%) - hold for recovery toward MA50. CCL shows RSI 60.68 with +10.47% 7d momentum above all short-term MAs - hold for continued uptrend. F has neutral RSI 48.26 with +9.47% momentum above MA7/MA20 - hold as it approaches 52-week high potential. No sells recommended as all positions show either bullish momentum or recovery potential without being significantly overbought.",
+  "last_strategy": "With only $2.89 cash available and a $2.00 transaction fee, I cannot make any purchases (minimum needed would be price + $2 fee). Reviewing current holdings: NVDA is at its 52-week high with strong momentum (+12.24% 7d) and RSI at 33.67 - hold for continued upside. AAPL has RSI at 68.74 approaching overbought but still showing positive momentum - hold. UAL is slightly down from purchase price ($98.54 to $94.96) with RSI at 35.21 indicating oversold conditions and positive 7-day momentum (+6.35%) - hold for recovery. CCL is up from purchase ($28.02 to $28.59) with RSI at 60.68 and strong momentum (+13.45% 7d) - hold. F is slightly down from purchase ($12.73 to $12.60) with neutral RSI and positive momentum - hold. No positions warrant selling at this time as none are significantly overbought and most show positive short-term momentum. Will wait for better entry opportunities or portfolio gains to free up capital.",
   "last_decisions": []
 }
