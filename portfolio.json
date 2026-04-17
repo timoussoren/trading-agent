@@ -73,33 +73,33 @@
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1091.15,
-  "invested": 1088.26,
+  "total_value": 1128.04,
+  "invested": 1125.15,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 198.35,
-      "value": 595.05
+      "price": 200.8,
+      "value": 602.4
     },
     "AAPL": {
       "shares": 1,
-      "price": 263.4,
-      "value": 263.4
+      "price": 272.23,
+      "value": 272.23
     },
     "UAL": {
       "shares": 2,
-      "price": 95.03,
-      "value": 190.06
+      "price": 103.93,
+      "value": 207.86
     },
     "CCL": {
       "shares": 1,
-      "price": 27.31,
-      "value": 27.31
+      "price": 29.69,
+      "value": 29.69
     },
     "F": {
       "shares": 1,
-      "price": 12.44,
-      "value": 12.44
+      "price": 12.97,
+      "value": 12.97
     }
   },
   "value_history": [
@@ -456,8 +456,14 @@
       "total_value": 1091.15,
       "cash": 2.89,
       "invested": 1088.26
+    },
+    {
+      "timestamp": "2026-04-17T15:34:12.031435",
+      "total_value": 1128.04,
+      "cash": 2.89,
+      "invested": 1125.15
     }
   ],
-  "last_strategy": "With only $2.89 cash available and a $2.00 transaction fee, I cannot make any purchases (minimum needed would be at least $4.00+ for the cheapest stock). Reviewing current holdings: AAPL has RSI of 84.23 (overbought) but only 1 share worth $263.40 - selling would net ~$261.40 after fee, but the stock still has momentum and is near 52-week high. NVDA at RSI 60.76 with strong momentum (+8.94% 7d) and approaching 52-week high - hold. CCL at RSI 70.45 is borderline overbought with negative 7d momentum (-2.57%), but with only 1 share worth $27.31, selling nets only $25.31 after fee - not worth the transaction cost for such small position. UAL and F have neutral indicators and should be held. No compelling sell signals strong enough to justify the $2 fee on small positions, and insufficient cash to buy. Holding all positions.",
+  "last_strategy": "With only $2.89 cash available and a $2.00 transaction fee, I cannot make any purchases (minimum needed would be $4.89 for even the cheapest stock). Reviewing current holdings: AAPL has RSI of 84.23 (overbought) and is near 52-week high, but showing strong momentum - will hold for now as it's still trending up. NVDA is at its 52-week high with healthy RSI of 60.76 and strong momentum - continue holding. CCL has RSI of 70.45 (borderline overbought) with +6.61% weekly momentum - monitoring but holding. UAL shows solid momentum at +6.41% with RSI 60.53 - healthy position to hold. F continues steady growth with RSI 56.6 - hold. No sells recommended this cycle as all positions show positive momentum despite some overbought signals. Will wait for either more cash from dividends/future sells or clearer reversal signals before acting.",
   "last_decisions": []
 }
