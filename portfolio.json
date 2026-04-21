@@ -101,38 +101,38 @@
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1089.63,
-  "invested": 1080.08,
+  "total_value": 1084.55,
+  "invested": 1075.0,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 200.05,
-      "value": 600.15
+      "price": 199.61,
+      "value": 598.83
     },
     "UAL": {
       "shares": 2,
-      "price": 97.58,
-      "value": 195.16
+      "price": 96.47,
+      "value": 192.94
     },
     "CCL": {
       "shares": 1,
-      "price": 27.48,
-      "value": 27.48
+      "price": 27.34,
+      "value": 27.34
     },
     "F": {
       "shares": 1,
-      "price": 12.86,
-      "value": 12.86
+      "price": 12.8,
+      "value": 12.8
     },
     "NFLX": {
       "shares": 2,
-      "price": 93.1,
-      "value": 186.2
+      "price": 92.64,
+      "value": 185.28
     },
     "NCLH": {
       "shares": 3,
-      "price": 19.41,
-      "value": 58.23
+      "price": 19.27,
+      "value": 57.81
     }
   },
   "value_history": [
@@ -567,8 +567,14 @@
       "total_value": 1089.63,
       "cash": 9.55,
       "invested": 1080.08
+    },
+    {
+      "timestamp": "2026-04-21T19:50:03.082899",
+      "total_value": 1084.55,
+      "cash": 9.55,
+      "invested": 1075.0
     }
   ],
-  "last_strategy": "With only $9.55 cash available and a $2.00 transaction fee per trade, I cannot afford to buy any stocks from the available list (cheapest option F at $12.86 would cost $14.86 total). Reviewing current holdings: NVDA (RSI 55, price near 52w high, good momentum) - HOLD; UAL (RSI 58, above MA7/MA20, positive momentum) - HOLD; CCL (RSI 71 slightly overbought but only 1 share worth $27.48, selling would net $25.48 after fee - not worth it for minimal repositioning); F (RSI 45, good momentum, above MAs) - HOLD; NFLX (RSI 39, below MAs, -9.75% weekly momentum, concerning but still above MA50) - HOLD for potential bounce; NCLH (RSI 64, negative momentum -4.2%, below MA7/MA20/MA50) - concerning but selling 3 shares at $19.41 nets only $56.23 after fee. No compelling sell signals strong enough to justify transaction costs, and no buying power available. Holding current positions.",
+  "last_strategy": "With only $9.55 cash available and a $2.00 transaction fee per trade, I cannot afford to purchase any stocks from the available list (cheapest is F at $12.80 + $2 fee = $14.80). Reviewing current holdings: NVDA is performing well near 52-week highs with healthy RSI (55.03) - hold. UAL shows stable momentum above MA20 - hold. CCL has RSI at 71.21 (slightly overbought) but with only 1 share and modest gains, selling would net minimal profit after fees. NFLX is down 10.2% in 7 days with RSI at 39.48 approaching oversold - hold for recovery. NCLH is down 4.89% but RSI at 63.52 is acceptable - hold. F shows positive momentum with price above all MAs - hold. No compelling sell signals justify the $2 transaction fee given current position sizes and market conditions.",
   "last_decisions": []
 }
