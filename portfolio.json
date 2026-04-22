@@ -101,38 +101,38 @@
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1086.74,
-  "invested": 1077.19,
+  "total_value": 1077.37,
+  "invested": 1067.82,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 199.88,
-      "value": 599.64
+      "price": 201.13,
+      "value": 603.39
     },
     "UAL": {
       "shares": 2,
-      "price": 97.13,
-      "value": 194.26
+      "price": 90.56,
+      "value": 181.12
     },
     "CCL": {
       "shares": 1,
-      "price": 27.36,
-      "value": 27.36
+      "price": 27.25,
+      "value": 27.25
     },
     "F": {
       "shares": 1,
-      "price": 12.78,
-      "value": 12.78
+      "price": 12.72,
+      "value": 12.72
     },
     "NFLX": {
       "shares": 2,
-      "price": 92.58,
-      "value": 185.16
+      "price": 92.93,
+      "value": 185.86
     },
     "NCLH": {
       "shares": 3,
-      "price": 19.33,
-      "value": 57.99
+      "price": 19.16,
+      "value": 57.48
     }
   },
   "value_history": [
@@ -579,8 +579,14 @@
       "total_value": 1086.74,
       "cash": 9.55,
       "invested": 1077.19
+    },
+    {
+      "timestamp": "2026-04-22T15:47:28.828971",
+      "total_value": 1077.37,
+      "cash": 9.55,
+      "invested": 1067.82
     }
   ],
-  "last_strategy": "With only $9.55 cash available and a $2.00 transaction fee, I cannot afford to buy any stocks from the available list (cheapest is F at $12.78 + $2 fee = $14.78). Reviewing current holdings: NVDA is performing well near 52-week high with healthy RSI (55.02) and positive momentum - hold. UAL shows stable momentum with neutral RSI (54.94) - hold. CCL has RSI of 69.10 approaching overbought but still within acceptable range - hold for now. F shows positive momentum (+5.1% 7-day) with neutral RSI - hold. NFLX is down 10.26% over 7 days with RSI at 37.55 (approaching oversold) - hold as it may bounce from MA50 support at $92.44. NCLH is down 4.59% but RSI at 60.13 is still healthy - hold. No positions warrant selling at current levels as none are significantly overbought, and selling would only generate cash that still couldn't buy meaningful positions after fees. Maintaining current positions and waiting for better opportunities.",
+  "last_strategy": "With only $9.55 cash available and a $2.00 transaction fee per trade, I cannot afford to buy any stocks from the available list (cheapest option F at $12.72 would cost $14.72 total). Reviewing current holdings: NVDA is performing well at near 52-week high with healthy RSI of 55 - hold. UAL shows weakness (-6.83% 7-day momentum) but RSI at 55 is neutral - hold for recovery. CCL RSI at 69 is approaching overbought but not yet critical - hold. F is stable with neutral indicators - hold. NFLX is down 12.56% over 7 days with RSI at 37.55 (approaching oversold) - hold for potential bounce as it's near MA50 support. NCLH showing weakness (-9.15% 7-day) but RSI at 60 is healthy - hold. No positions warrant selling at current levels as none are significantly overbought, and selling would only free up capital with losses on recent purchases. Waiting for better entry points or for holdings to reach sell targets.",
   "last_decisions": []
 }
