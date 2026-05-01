@@ -101,23 +101,23 @@
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1072.77,
-  "invested": 1063.22,
+  "total_value": 1069.46,
+  "invested": 1059.91,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 199.4,
-      "value": 598.2
+      "price": 198.96,
+      "value": 596.88
     },
     "UAL": {
       "shares": 2,
-      "price": 92.02,
-      "value": 184.04
+      "price": 92.08,
+      "value": 184.16
     },
     "CCL": {
       "shares": 1,
-      "price": 26.99,
-      "value": 26.99
+      "price": 26.58,
+      "value": 26.58
     },
     "F": {
       "shares": 1,
@@ -126,13 +126,13 @@
     },
     "NFLX": {
       "shares": 2,
-      "price": 92.6,
-      "value": 185.2
+      "price": 92.11,
+      "value": 184.22
     },
     "NCLH": {
       "shares": 3,
-      "price": 18.97,
-      "value": 56.91
+      "price": 18.73,
+      "value": 56.19
     }
   },
   "value_history": [
@@ -765,8 +765,14 @@
       "total_value": 1072.77,
       "cash": 9.55,
       "invested": 1063.22
+    },
+    {
+      "timestamp": "2026-05-01T19:50:49.127538",
+      "total_value": 1069.46,
+      "cash": 9.55,
+      "invested": 1059.91
     }
   ],
-  "last_strategy": "With only $9.55 cash available and a $2.00 transaction fee per trade, I cannot afford to purchase any stocks from the available list (minimum price is F at $11.88 + $2 fee = $13.88). Reviewing current holdings: NVDA (RSI 55.82, neutral), UAL (RSI 49.82, neutral), CCL (RSI 41.46, slightly oversold), F (RSI 49.51, neutral), NFLX (RSI 33.43, approaching oversold), and NCLH (RSI 49.39, neutral). None of my holdings show overbought conditions (RSI > 70) that would warrant selling, and NFLX is actually in oversold territory suggesting potential upside. The portfolio is well-positioned with balanced RSI levels. Holding all positions to let oversold positions like NFLX recover and waiting for better opportunities.",
+  "last_strategy": "With only $9.55 cash available and a $2.00 transaction fee per trade, I cannot afford to buy any stocks from the available list (cheapest option PSKY at $11.12 + $2 fee = $13.12 exceeds my cash). Reviewing current holdings: NVDA (RSI 55.82, neutral), UAL (RSI 49.82, neutral), CCL (RSI 41.46, slightly oversold), F (RSI 49.51, neutral), NFLX (RSI 33.43, approaching oversold), NCLH (RSI 49.39, neutral). None of my holdings show overbought conditions (RSI > 70) that would warrant selling for profit-taking. NFLX is actually in oversold territory suggesting it may rebound. All positions are at neutral-to-oversold levels with no immediate sell signals. Holding current positions and waiting for either a recovery in prices or overbought conditions to emerge before taking action.",
   "last_decisions": []
 }
