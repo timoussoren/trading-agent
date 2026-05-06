@@ -1,11 +1,11 @@
 {
-  "cash": 184.09,
+  "cash": 60.04,
   "holdings": {
     "NVDA": 3,
     "UAL": 2,
     "CCL": 1,
     "F": 1,
-    "NCLH": 3
+    "SMCI": 5
   },
   "transaction_history": [
     {
@@ -106,41 +106,54 @@
       "reason": "NFLX has RSI of 71.94 (overbought territory), price is below MA7, MA20, and MA50 indicating bearish trend. Negative momentum (-4.34% 7-day, -4.35% 30-day). Selling at $88.27 to lock in position and free up capital before further decline. We bought at $97.18, so taking the loss now to redeploy capital more effectively.",
       "price": 88.27,
       "total": 174.54
+    },
+    {
+      "timestamp": "2026-05-06T21:09:18.473108",
+      "action": "sell",
+      "symbol": "NCLH",
+      "shares": 3,
+      "reason": "NCLH showing negative momentum (-12.22% 30-day), price below MA20 (19.08) and MA50 (19.81) indicating bearish trend. Cutting losses at $17.75 (bought at $21.11) to redeploy capital into stronger opportunities. RSI at 47.41 shows no oversold bounce expected.",
+      "price": 17.75,
+      "total": 51.25
+    },
+    {
+      "timestamp": "2026-05-06T21:09:18.473118",
+      "action": "buy",
+      "symbol": "SMCI",
+      "shares": 5,
+      "reason": "SMCI at $34.66 shows exceptional momentum (+27.19% 7-day, +44.12% 30-day) with volume ratio of 2.96 confirming strong buying interest. RSI at 43.63 is healthy (not overbought despite rally). Price well above MA7, MA20, MA50 - strong bullish trend. At 52-week high showing breakout potential. Cost: $34.66 x 5 + $2 = $175.30",
+      "price": 34.66,
+      "total": 175.3
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1099.96,
-  "invested": 915.87,
+  "total_value": 1096.6,
+  "invested": 1036.56,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 207.66,
-      "value": 622.98
+      "price": 207.83,
+      "value": 623.49
     },
     "UAL": {
       "shares": 2,
-      "price": 100.03,
-      "value": 200.06
+      "price": 100.04,
+      "value": 200.08
     },
     "CCL": {
       "shares": 1,
-      "price": 27.51,
-      "value": 27.51
+      "price": 27.52,
+      "value": 27.52
     },
     "F": {
       "shares": 1,
-      "price": 12.16,
-      "value": 12.16
-    },
-    "NFLX": {
-      "shares": 2,
-      "price": 88.27,
-      "value": 176.54
+      "price": 12.17,
+      "value": 12.17
     },
     "NCLH": {
       "shares": 3,
-      "price": 17.72,
-      "value": 53.16
+      "price": 17.75,
+      "value": 53.25
     }
   },
   "value_history": [
@@ -863,15 +876,27 @@
       "total_value": 1099.96,
       "cash": 184.09,
       "invested": 915.87
+    },
+    {
+      "timestamp": "2026-05-06T21:09:18.473131",
+      "total_value": 1096.6,
+      "cash": 60.04,
+      "invested": 1036.56
     }
   ],
-  "last_strategy": "Selling NFLX due to overbought RSI combined with bearish price action below all key moving averages and negative momentum. The stock has dropped from our entry of $97.18 to $88.27 and technicals suggest continued weakness. With only $9.55 cash available, this sale will free up ~$174.54 (after $2 fee) to potentially buy into better opportunities like SMCI or DOC which show strong momentum and favorable technicals. Holding NVDA (solid position above MAs), UAL (strong momentum +10.64%), CCL (positive momentum, low RSI), F (neutral RSI, holding), and NCLH (near support, watching for reversal).",
+  "last_strategy": "Rotating out of underperforming NCLH position (bearish trend, negative momentum) into high-momentum SMCI which shows exceptional strength with +44% 30-day momentum, high volume confirmation, and healthy RSI indicating room to run. Keeping NVDA (solid 30-day momentum despite short-term pullback), UAL (strong 7-day momentum +10.65%, RSI 37.76 suggests oversold), CCL (positive momentum, RSI 35 oversold), and F (neutral, low cost basis). This rotation aims to capture SMCI's breakout momentum while preserving capital in other holdings showing technical strength.",
   "last_decisions": [
     {
       "action": "sell",
-      "symbol": "NFLX",
-      "shares": 2,
-      "reason": "NFLX has RSI of 71.94 (overbought territory), price is below MA7, MA20, and MA50 indicating bearish trend. Negative momentum (-4.34% 7-day, -4.35% 30-day). Selling at $88.27 to lock in position and free up capital before further decline. We bought at $97.18, so taking the loss now to redeploy capital more effectively."
+      "symbol": "NCLH",
+      "shares": 3,
+      "reason": "NCLH showing negative momentum (-12.22% 30-day), price below MA20 (19.08) and MA50 (19.81) indicating bearish trend. Cutting losses at $17.75 (bought at $21.11) to redeploy capital into stronger opportunities. RSI at 47.41 shows no oversold bounce expected."
+    },
+    {
+      "action": "buy",
+      "symbol": "SMCI",
+      "shares": 5,
+      "reason": "SMCI at $34.66 shows exceptional momentum (+27.19% 7-day, +44.12% 30-day) with volume ratio of 2.96 confirming strong buying interest. RSI at 43.63 is healthy (not overbought despite rally). Price well above MA7, MA20, MA50 - strong bullish trend. At 52-week high showing breakout potential. Cost: $34.66 x 5 + $2 = $175.30"
     }
   ]
 }
