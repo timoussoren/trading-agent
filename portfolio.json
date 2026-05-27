@@ -136,33 +136,33 @@
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1169.81,
-  "invested": 1160.37,
+  "total_value": 1170.81,
+  "invested": 1161.37,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 212.36,
-      "value": 637.08
+      "price": 212.6,
+      "value": 637.8
     },
     "UAL": {
       "shares": 2,
-      "price": 113.19,
-      "value": 226.38
+      "price": 112.62,
+      "value": 225.24
     },
     "CCL": {
       "shares": 1,
-      "price": 27.96,
-      "value": 27.96
+      "price": 27.98,
+      "value": 27.98
     },
     "F": {
       "shares": 5,
-      "price": 15.87,
-      "value": 79.35
+      "price": 15.88,
+      "value": 79.4
     },
     "SMCI": {
       "shares": 5,
-      "price": 37.92,
-      "value": 189.6
+      "price": 38.19,
+      "value": 190.95
     }
   },
   "value_history": [
@@ -1329,8 +1329,14 @@
       "total_value": 1169.81,
       "cash": 9.44,
       "invested": 1160.37
+    },
+    {
+      "timestamp": "2026-05-27T20:54:17.782726",
+      "total_value": 1170.81,
+      "cash": 9.44,
+      "invested": 1161.37
     }
   ],
-  "last_strategy": "Holding current positions. Portfolio is performing well with F (+30.6% gain, at 52-week high), SMCI (+9.4% gain, at 52-week high with strong momentum), and UAL (at 52-week high with +22% 7-day momentum). While several stocks show oversold RSI readings (BSX, ROL, SWKS, EL), available cash of $9.44 is insufficient to make any meaningful purchase after the $2 transaction fee. The cheapest actionable stock would be NCLH at $18.15, requiring $20.15 minimum. No sells recommended as all holdings show strong momentum: F has exceptional 21.8% 7-day momentum, SMCI continues its breakout with 22.9% 7-day gains, and UAL is leading with 22.3% weekly gains. CCL also showing recovery with 12.2% weekly momentum. NVDA is consolidating but remains above MA50 with neutral RSI - holding for continued upside.",
+  "last_strategy": "Holding all current positions. Portfolio is performing well with F (+30.7% gain), SMCI (+10.2% gain), UAL at 52-week high, and CCL showing strong momentum. All holdings except NVDA are at or near 52-week highs with strong bullish trends. NVDA is slightly weak (-4.37% 7-day) but still above MA50 with solid 30-day momentum. With only $9.44 cash available, cannot make any meaningful purchases (minimum stock price is $15.88 for F, requiring $17.88 with fee). RSI readings on F (16.73) and SMCI (21.29) indicate oversold conditions despite being at highs - likely a lagging indicator after sharp rallies. No sells warranted as momentum remains strong across portfolio.",
   "last_decisions": []
 }
