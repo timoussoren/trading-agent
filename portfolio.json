@@ -136,33 +136,33 @@
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1153.42,
-  "invested": 1143.98,
+  "total_value": 1147.68,
+  "invested": 1138.24,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 208.07,
-      "value": 624.21
+      "price": 206.17,
+      "value": 618.51
     },
     "UAL": {
       "shares": 2,
-      "price": 104.84,
-      "value": 209.68
+      "price": 105.11,
+      "value": 210.22
     },
     "CCL": {
       "shares": 1,
-      "price": 27.24,
-      "value": 27.24
+      "price": 27.06,
+      "value": 27.06
     },
     "F": {
       "shares": 5,
-      "price": 14.73,
-      "value": 73.65
+      "price": 14.74,
+      "value": 73.7
     },
     "SMCI": {
       "shares": 5,
-      "price": 41.84,
-      "value": 209.2
+      "price": 41.75,
+      "value": 208.75
     }
   },
   "value_history": [
@@ -1527,8 +1527,14 @@
       "total_value": 1153.42,
       "cash": 9.44,
       "invested": 1143.98
+    },
+    {
+      "timestamp": "2026-06-05T19:07:51.924356",
+      "total_value": 1147.68,
+      "cash": 9.44,
+      "invested": 1138.24
     }
   ],
-  "last_strategy": "Holding all positions due to limited cash ($9.44) and current market conditions. SMCI shows RSI of 29.18 (oversold) with strong 30-day momentum (+43.88%), suggesting potential bounce - holding position. NVDA at RSI 44.17 is neutral with price above MA50, maintaining position. F has dropped significantly (-11.53% 7-day) with RSI at 33.5 (near oversold), but still above MA50 - holding for recovery. UAL and CCL both show mild pullbacks but remain above MA50 with decent 30-day momentum. No sells recommended as current holdings have recovery potential. Cannot buy any meaningful position with only $9.44 cash (cheapest available stock F at $14.73 + $2 fee = $16.73 exceeds available cash). Will wait for better entry points or position exits to redeploy capital.",
+  "last_strategy": "Holding current positions due to limited cash ($9.44) which is insufficient to buy any meaningful shares after the $2 fee. Portfolio analysis: SMCI has RSI of 29.18 (oversold) suggesting potential bounce, but already own 5 shares and it's down from purchase price. F has RSI of 33.5 (near oversold) with -11.47% 7-day momentum but strong 30-day momentum (+20.56%), worth holding for recovery. NVDA is consolidating with neutral RSI (44.17) above MA50 - holding. UAL showing weakness short-term but still above MA50, maintaining position. CCL is stable. No sells recommended as most holdings are in short-term pullbacks within longer uptrends, and selling would incur $2 fees that eat into the small positions. Will wait for positions to recover or for cash accumulation from future sells to redeploy into oversold opportunities like LULU (RSI 29.01) or COIN (RSI 33.72) when capital permits.",
   "last_decisions": []
 }
