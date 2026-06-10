@@ -136,33 +136,33 @@
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1158.95,
-  "invested": 1149.51,
+  "total_value": 1080.48,
+  "invested": 1071.04,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 208.19,
-      "value": 624.57
+      "price": 202.19,
+      "value": 606.57
     },
     "UAL": {
       "shares": 2,
-      "price": 109.63,
-      "value": 219.26
+      "price": 102.59,
+      "value": 205.18
     },
     "CCL": {
       "shares": 1,
-      "price": 27.73,
-      "value": 27.73
+      "price": 25.99,
+      "value": 25.99
     },
     "F": {
       "shares": 5,
-      "price": 14.95,
-      "value": 74.75
+      "price": 14.38,
+      "value": 71.9
     },
     "SMCI": {
       "shares": 5,
-      "price": 40.64,
-      "value": 203.2
+      "price": 32.28,
+      "value": 161.4
     }
   },
   "value_history": [
@@ -1605,8 +1605,14 @@
       "total_value": 1158.95,
       "cash": 9.44,
       "invested": 1149.51
+    },
+    {
+      "timestamp": "2026-06-10T17:40:58.922359",
+      "total_value": 1080.48,
+      "cash": 9.44,
+      "invested": 1071.04
     }
   ],
-  "last_strategy": "Holding current positions despite mixed signals. SMCI shows concerning short-term weakness (RSI 24.29, -13.31% 7-day) but still has strong 30-day momentum (+49.14%) and is above MA20/MA50 - may be a temporary pullback. NVDA and F are oversold (RSI 26.06 and 26.70) suggesting potential bounce rather than sell. UAL and CCL remain in bullish trends above key MAs. With only $9.44 cash available, cannot make any meaningful purchases (cheapest options like F at $14.95 would require $16.95 including fee). Will wait for either a rebound in oversold positions or free up capital by selling if weakness continues.",
+  "last_strategy": "Holding current positions despite challenging conditions. SMCI, NVDA, and F are all deeply oversold (RSI 24-27) suggesting potential bounce opportunities - selling now would lock in losses at likely bottoms. SMCI dropped 35% in 7 days but still shows +22% 30-day momentum, indicating this may be a pullback in an uptrend. With only $9.44 cash available, no meaningful purchases are possible (cheapest affordable stock would be F at $14.38 + $2 fee = $16.38, exceeding available cash). The portfolio is positioned in oversold stocks that could rebound. Will monitor for recovery signals before taking action.",
   "last_decisions": []
 }
