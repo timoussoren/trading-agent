@@ -1,11 +1,10 @@
 {
-  "cash": 9.44,
+  "cash": 159.34,
   "holdings": {
     "NVDA": 3,
     "UAL": 2,
     "CCL": 1,
-    "F": 5,
-    "SMCI": 5
+    "F": 5
   },
   "transaction_history": [
     {
@@ -133,36 +132,45 @@
       "reason": "F at $12.15 is affordable with available cash, RSI at 49.22 is neutral, price above MA7 ($11.96) showing short-term strength, modest positive 30-day momentum (+4.74%). Low-risk position to deploy remaining cash efficiently. Cost: $12.15 x 4 + $2 = $50.60",
       "price": 12.15,
       "total": 50.6
+    },
+    {
+      "timestamp": "2026-06-11T17:49:11.387271",
+      "action": "sell",
+      "symbol": "SMCI",
+      "shares": 5,
+      "reason": "SMCI showing severe weakness with -35.93% 7-day momentum, RSI at 30.03 (oversold but in freefall), price well below MA7 (40.03), MA20 (38.40), and MA50 (32.07). High volume ratio of 2.39 confirms heavy selling pressure. Cut losses now - bought at $34.66, selling at $30.38 to prevent further downside.",
+      "price": 30.38,
+      "total": 149.9
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1060.1,
-  "invested": 1050.66,
+  "total_value": 1089.9,
+  "invested": 930.56,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 200.42,
-      "value": 601.26
+      "price": 203.54,
+      "value": 610.62
     },
     "UAL": {
       "shares": 2,
-      "price": 102.78,
-      "value": 205.56
+      "price": 109.81,
+      "value": 219.62
     },
     "CCL": {
       "shares": 1,
-      "price": 25.99,
-      "value": 25.99
+      "price": 27.52,
+      "value": 27.52
     },
     "F": {
       "shares": 5,
-      "price": 14.3,
-      "value": 71.5
+      "price": 14.56,
+      "value": 72.8
     },
     "SMCI": {
       "shares": 5,
-      "price": 29.27,
-      "value": 146.35
+      "price": 30.38,
+      "value": 151.9
     }
   },
   "value_history": [
@@ -1635,8 +1643,21 @@
       "total_value": 1060.1,
       "cash": 9.44,
       "invested": 1050.66
+    },
+    {
+      "timestamp": "2026-06-11T17:49:11.387289",
+      "total_value": 1089.9,
+      "cash": 159.34,
+      "invested": 930.56
     }
   ],
-  "last_strategy": "HOLD - No trades executed this cycle. With only $9.44 cash available, I cannot afford any meaningful purchase after the $2 transaction fee (most affordable stock is F at $14.30, requiring $16.30 minimum). Reviewing portfolio: SMCI is concerning with -41.66% 7-day momentum and RSI at 30.03 (oversold), but selling would lock in significant losses from our $34.66 buy price to current $29.27. NVDA and F both show RSI around 38 (approaching oversold) with negative short-term momentum but positive 30-day trends. UAL maintains healthy technicals with +15.98% 30-day momentum. CCL is neutral. Strategy is to hold current positions and wait for either: (1) price recovery in beaten-down positions (SMCI, NVDA, F) given oversold RSI readings, or (2) continued deterioration that would warrant cutting losses to preserve capital. No forced selling at current oversold levels.",
-  "last_decisions": []
+  "last_strategy": "Cutting losses on SMCI which has collapsed -35.93% in 7 days with heavy selling volume. Despite being technically oversold (RSI 30), the extreme negative momentum and price well below all moving averages suggests continued downside risk. No new buys recommended - after SMCI sale ($149.90 net), will have ~$157 cash but current market movers are either too expensive (KLAC, SNDK, LRCX, AMAT) or showing weakness. Holding UAL (strong uptrend), CCL (stable), NVDA (mild pullback but solid fundamentals), and F (despite short-term weakness, good 30-day momentum). Will wait for better entry opportunities.",
+  "last_decisions": [
+    {
+      "action": "sell",
+      "symbol": "SMCI",
+      "shares": 5,
+      "reason": "SMCI showing severe weakness with -35.93% 7-day momentum, RSI at 30.03 (oversold but in freefall), price well below MA7 (40.03), MA20 (38.40), and MA50 (32.07). High volume ratio of 2.39 confirms heavy selling pressure. Cut losses now - bought at $34.66, selling at $30.38 to prevent further downside."
+    }
+  ]
 }
