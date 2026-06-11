@@ -1,10 +1,11 @@
 {
-  "cash": 113.56,
+  "cash": 6.35,
   "holdings": {
     "NVDA": 3,
     "UAL": 2,
     "CCL": 1,
-    "INTC": 1
+    "INTC": 1,
+    "IP": 3
   },
   "transaction_history": [
     {
@@ -159,31 +160,40 @@
       "reason": "INTC at $114.38 shows solid setup: price above MA7 (109.04), MA20 (113.12), and well above MA50 (94.10) indicating bullish trend. RSI at 41.10 is healthy with room to run. Positive momentum (+1.48% 7-day, +21.06% 30-day). Volume ratio at 1.03 confirms normal trading. Near 52-week high shows strength.",
       "price": 114.38,
       "total": 116.38
+    },
+    {
+      "timestamp": "2026-06-11T19:45:05.000959",
+      "action": "buy",
+      "symbol": "IP",
+      "shares": 3,
+      "reason": "IP at $35.07 is affordable with available cash. Price above MA7 ($33.54), MA20 ($32.30), and MA50 ($33.17) showing bullish trend. RSI at 39.09 is healthy with room to run. Positive momentum (+5% 7-day, +17% 30-day). Volume ratio at 1.04 confirms normal trading. Near 52-week high ($38.09) shows strength. Cost: $35.07 x 3 + $2 = $107.21",
+      "price": 35.07,
+      "total": 107.21
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1080.07,
-  "invested": 966.51,
+  "total_value": 1096.91,
+  "invested": 1090.56,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 202.38,
-      "value": 607.14
+      "price": 205.52,
+      "value": 616.56
     },
     "UAL": {
       "shares": 2,
-      "price": 108.79,
-      "value": 217.58
+      "price": 111.47,
+      "value": 222.94
     },
     "CCL": {
       "shares": 1,
-      "price": 27.41,
-      "value": 27.41
+      "price": 28.08,
+      "value": 28.08
     },
-    "F": {
-      "shares": 5,
-      "price": 14.52,
-      "value": 72.6
+    "INTC": {
+      "shares": 1,
+      "price": 117.77,
+      "value": 117.77
     }
   },
   "value_history": [
@@ -1668,21 +1678,21 @@
       "total_value": 1080.07,
       "cash": 113.56,
       "invested": 966.51
-    }
-  ],
-  "last_strategy": "Selling F to lock in ~19% profit as momentum turns negative and price breaks below short-term MAs. Using proceeds to buy INTC which shows strong bullish structure with price above all key MAs and solid 30-day momentum. Holding NVDA despite short-term weakness (good long-term position above MA50), UAL (strong uptrend with +20.88% 30-day momentum), and CCL (stable with price above all MAs). Maintaining diversified portfolio while rotating out of weakening position into stronger technical setup.",
-  "last_decisions": [
-    {
-      "action": "sell",
-      "symbol": "F",
-      "shares": 5,
-      "reason": "F showing weakness with -7.57% 7-day momentum, price below MA7 (14.96) and MA20 (14.93), RSI at 38.17 declining. Low volume ratio (0.4) suggests lack of buying interest. Selling at $14.52 to lock in gains from $12.15 buy price (+19.5% profit) before further decline."
     },
     {
+      "timestamp": "2026-06-11T19:45:05.000977",
+      "total_value": 1096.91,
+      "cash": 6.35,
+      "invested": 1090.56
+    }
+  ],
+  "last_strategy": "Deploying available cash into IP which shows solid technical setup with bullish trend across all moving averages and healthy RSI. Current holdings look stable - INTC showing continued strength (+4.49% 7-day momentum, price above all MAs), UAL performing well (+6.02% 7-day, near 52-week high), CCL showing modest gains. NVDA is slightly weak (below MA7/MA20, RSI 38.1) but still above MA50 - holding for now as momentum could reverse. Not buying oversold stocks like PTC, ORCL, or SMCI as they're in clear downtrends despite low RSI values. Avoiding high-priced stocks (KLAC, SNDK, MU, AMAT) due to insufficient cash.",
+  "last_decisions": [
+    {
       "action": "buy",
-      "symbol": "INTC",
-      "shares": 1,
-      "reason": "INTC at $114.38 shows solid setup: price above MA7 (109.04), MA20 (113.12), and well above MA50 (94.10) indicating bullish trend. RSI at 41.10 is healthy with room to run. Positive momentum (+1.48% 7-day, +21.06% 30-day). Volume ratio at 1.03 confirms normal trading. Near 52-week high shows strength."
+      "symbol": "IP",
+      "shares": 3,
+      "reason": "IP at $35.07 is affordable with available cash. Price above MA7 ($33.54), MA20 ($32.30), and MA50 ($33.17) showing bullish trend. RSI at 39.09 is healthy with room to run. Positive momentum (+5% 7-day, +17% 30-day). Volume ratio at 1.04 confirms normal trading. Near 52-week high ($38.09) shows strength. Cost: $35.07 x 3 + $2 = $107.21"
     }
   ]
 }
