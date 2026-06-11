@@ -172,28 +172,33 @@
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1096.91,
-  "invested": 1090.56,
+  "total_value": 1096.11,
+  "invested": 1089.76,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 205.52,
-      "value": 616.56
+      "price": 204.87,
+      "value": 614.61
     },
     "UAL": {
       "shares": 2,
-      "price": 111.47,
-      "value": 222.94
+      "price": 112.61,
+      "value": 225.22
     },
     "CCL": {
       "shares": 1,
-      "price": 28.08,
-      "value": 28.08
+      "price": 28.12,
+      "value": 28.12
     },
     "INTC": {
       "shares": 1,
-      "price": 117.77,
-      "value": 117.77
+      "price": 116.96,
+      "value": 116.96
+    },
+    "IP": {
+      "shares": 3,
+      "price": 34.95,
+      "value": 104.85
     }
   },
   "value_history": [
@@ -1684,15 +1689,14 @@
       "total_value": 1096.91,
       "cash": 6.35,
       "invested": 1090.56
+    },
+    {
+      "timestamp": "2026-06-11T21:08:41.792500",
+      "total_value": 1096.11,
+      "cash": 6.35,
+      "invested": 1089.76
     }
   ],
-  "last_strategy": "Deploying available cash into IP which shows solid technical setup with bullish trend across all moving averages and healthy RSI. Current holdings look stable - INTC showing continued strength (+4.49% 7-day momentum, price above all MAs), UAL performing well (+6.02% 7-day, near 52-week high), CCL showing modest gains. NVDA is slightly weak (below MA7/MA20, RSI 38.1) but still above MA50 - holding for now as momentum could reverse. Not buying oversold stocks like PTC, ORCL, or SMCI as they're in clear downtrends despite low RSI values. Avoiding high-priced stocks (KLAC, SNDK, MU, AMAT) due to insufficient cash.",
-  "last_decisions": [
-    {
-      "action": "buy",
-      "symbol": "IP",
-      "shares": 3,
-      "reason": "IP at $35.07 is affordable with available cash. Price above MA7 ($33.54), MA20 ($32.30), and MA50 ($33.17) showing bullish trend. RSI at 39.09 is healthy with room to run. Positive momentum (+5% 7-day, +17% 30-day). Volume ratio at 1.04 confirms normal trading. Near 52-week high ($38.09) shows strength. Cost: $35.07 x 3 + $2 = $107.21"
-    }
-  ]
+  "last_strategy": "With only $6.35 cash available and a $2.00 transaction fee, I cannot afford to purchase any stocks from the available list (minimum price is CCL at $28.12, requiring $30.12 total). Current holdings are performing reasonably well: NVDA showing slight weakness (-4.49% 7-day momentum) but RSI at 42.19 suggests it's not oversold yet; UAL is strong with +7.1% 7-day momentum and price above all MAs; INTC continues bullish trend above MA7/MA20/MA50; CCL showing steady gains near 52-week high; IP maintaining bullish position above all MAs. No compelling reason to sell any positions - all holdings show decent technical setups without critical warning signs. Will hold current positions and wait for opportunities when more cash becomes available from potential profit-taking.",
+  "last_decisions": []
 }
