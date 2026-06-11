@@ -1,10 +1,10 @@
 {
-  "cash": 159.34,
+  "cash": 113.56,
   "holdings": {
     "NVDA": 3,
     "UAL": 2,
     "CCL": 1,
-    "F": 5
+    "INTC": 1
   },
   "transaction_history": [
     {
@@ -141,36 +141,49 @@
       "reason": "SMCI showing severe weakness with -35.93% 7-day momentum, RSI at 30.03 (oversold but in freefall), price well below MA7 (40.03), MA20 (38.40), and MA50 (32.07). High volume ratio of 2.39 confirms heavy selling pressure. Cut losses now - bought at $34.66, selling at $30.38 to prevent further downside.",
       "price": 30.38,
       "total": 149.9
+    },
+    {
+      "timestamp": "2026-06-11T18:38:32.148308",
+      "action": "sell",
+      "symbol": "F",
+      "shares": 5,
+      "reason": "F showing weakness with -7.57% 7-day momentum, price below MA7 (14.96) and MA20 (14.93), RSI at 38.17 declining. Low volume ratio (0.4) suggests lack of buying interest. Selling at $14.52 to lock in gains from $12.15 buy price (+19.5% profit) before further decline.",
+      "price": 14.52,
+      "total": 70.6
+    },
+    {
+      "timestamp": "2026-06-11T18:38:32.148315",
+      "action": "buy",
+      "symbol": "INTC",
+      "shares": 1,
+      "reason": "INTC at $114.38 shows solid setup: price above MA7 (109.04), MA20 (113.12), and well above MA50 (94.10) indicating bullish trend. RSI at 41.10 is healthy with room to run. Positive momentum (+1.48% 7-day, +21.06% 30-day). Volume ratio at 1.03 confirms normal trading. Near 52-week high shows strength.",
+      "price": 114.38,
+      "total": 116.38
     }
   ],
   "last_updated": "2026-04-03T08:56:44.691508",
-  "total_value": 1089.9,
-  "invested": 930.56,
+  "total_value": 1080.07,
+  "invested": 966.51,
   "holdings_with_value": {
     "NVDA": {
       "shares": 3,
-      "price": 203.54,
-      "value": 610.62
+      "price": 202.38,
+      "value": 607.14
     },
     "UAL": {
       "shares": 2,
-      "price": 109.81,
-      "value": 219.62
+      "price": 108.79,
+      "value": 217.58
     },
     "CCL": {
       "shares": 1,
-      "price": 27.52,
-      "value": 27.52
+      "price": 27.41,
+      "value": 27.41
     },
     "F": {
       "shares": 5,
-      "price": 14.56,
-      "value": 72.8
-    },
-    "SMCI": {
-      "shares": 5,
-      "price": 30.38,
-      "value": 151.9
+      "price": 14.52,
+      "value": 72.6
     }
   },
   "value_history": [
@@ -1649,15 +1662,27 @@
       "total_value": 1089.9,
       "cash": 159.34,
       "invested": 930.56
+    },
+    {
+      "timestamp": "2026-06-11T18:38:32.148325",
+      "total_value": 1080.07,
+      "cash": 113.56,
+      "invested": 966.51
     }
   ],
-  "last_strategy": "Cutting losses on SMCI which has collapsed -35.93% in 7 days with heavy selling volume. Despite being technically oversold (RSI 30), the extreme negative momentum and price well below all moving averages suggests continued downside risk. No new buys recommended - after SMCI sale ($149.90 net), will have ~$157 cash but current market movers are either too expensive (KLAC, SNDK, LRCX, AMAT) or showing weakness. Holding UAL (strong uptrend), CCL (stable), NVDA (mild pullback but solid fundamentals), and F (despite short-term weakness, good 30-day momentum). Will wait for better entry opportunities.",
+  "last_strategy": "Selling F to lock in ~19% profit as momentum turns negative and price breaks below short-term MAs. Using proceeds to buy INTC which shows strong bullish structure with price above all key MAs and solid 30-day momentum. Holding NVDA despite short-term weakness (good long-term position above MA50), UAL (strong uptrend with +20.88% 30-day momentum), and CCL (stable with price above all MAs). Maintaining diversified portfolio while rotating out of weakening position into stronger technical setup.",
   "last_decisions": [
     {
       "action": "sell",
-      "symbol": "SMCI",
+      "symbol": "F",
       "shares": 5,
-      "reason": "SMCI showing severe weakness with -35.93% 7-day momentum, RSI at 30.03 (oversold but in freefall), price well below MA7 (40.03), MA20 (38.40), and MA50 (32.07). High volume ratio of 2.39 confirms heavy selling pressure. Cut losses now - bought at $34.66, selling at $30.38 to prevent further downside."
+      "reason": "F showing weakness with -7.57% 7-day momentum, price below MA7 (14.96) and MA20 (14.93), RSI at 38.17 declining. Low volume ratio (0.4) suggests lack of buying interest. Selling at $14.52 to lock in gains from $12.15 buy price (+19.5% profit) before further decline."
+    },
+    {
+      "action": "buy",
+      "symbol": "INTC",
+      "shares": 1,
+      "reason": "INTC at $114.38 shows solid setup: price above MA7 (109.04), MA20 (113.12), and well above MA50 (94.10) indicating bullish trend. RSI at 41.10 is healthy with room to run. Positive momentum (+1.48% 7-day, +21.06% 30-day). Volume ratio at 1.03 confirms normal trading. Near 52-week high shows strength."
     }
   ]
 }
